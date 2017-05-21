@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
 
-import test_functions
-import test_filters
+from . import test_functions
+from . import test_filters

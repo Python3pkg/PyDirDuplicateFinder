@@ -4,7 +4,7 @@ __author__ = "Keul - lucafbb AT gmail.com"
 
 from os.path import basename
 import unittest
-from testcase import PyDirDuplicateFinderTestCase
+from .testcase import PyDirDuplicateFinderTestCase
 
 from pydirduplicatefinder import interface_texts
 from duplicatefinder import main

@@ -60,10 +60,10 @@ class PyDirDuplicateFinderTestCase(unittest.TestCase):
        @like: create a new file with the same content of an already generated file with given name.
        """
        files = self.files
-       if size and files.has_key(name):
+       if size and name in files:
            raise KeyError("A file with name %s already exists (size: %s bytes). Use a different name"
                           " or don't use the size attribute to use the same file." % (name, files[name]['size']) )
-       if not size and not like and not files.has_key(name):
+       if not size and not like and name not in files:
            raise KeyError("File with name %s not found. You must give a size." % name)
        
        if like:

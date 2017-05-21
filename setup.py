@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import sys, os
 
-import pydirduplicatefinder
+from . import pydirduplicatefinder
 
 setup(name='PyDirDuplicateFinder',
       # py_modules=['pydirduplicatefinder',],

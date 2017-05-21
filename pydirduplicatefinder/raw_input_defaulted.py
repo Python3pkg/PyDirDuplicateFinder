@@ -11,7 +11,7 @@ def _input_default(prompt, default):
        readline.insert_text(default)
    readline.set_startup_hook(startup_hook)
    try:
-       return raw_input(prompt)
+       return input(prompt)
    finally:
        readline.set_startup_hook(None)
 
@@ -21,5 +21,5 @@ def raw_input_defaulted(msg, default=''):
     no default is given.
     """
     if not default or not READLINE_AVAILABLE:
-        return raw_input(msg)
+        return input(msg)
     return _input_default(msg, default=default)
